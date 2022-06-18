@@ -5,6 +5,8 @@
 > This gives you a workload.txt file. in this file,
 > request rates (number of requests per second) are separated by a space.
 
+### Ready to use dataset files:
+- #### Nasa: [link](https://github.com/reconfigurable-ml-pipeline/web-service-datasets/raw/master/dataset/nasa/workload.tbz2)
 
 ### Nasa dataset
 - Two months' logs of all HTTP requests to the NASA Kennedy Space Center WWW server in Florida
