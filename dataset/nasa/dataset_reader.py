@@ -53,7 +53,6 @@ def process_file(file_name):
 
 
 if __name__ == "__main__":
-    pass
     requests = process_file(f"{NASA_LOGS_DIRECTORY}/NASA_access_log_Jul95")
     requests.extend(process_file(f"{NASA_LOGS_DIRECTORY}/NASA_access_log_Aug95"))
     print("maximum requests in a second", sorted(requests, reverse=True)[:100])

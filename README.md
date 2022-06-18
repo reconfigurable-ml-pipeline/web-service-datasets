@@ -42,3 +42,20 @@
   - run `pip install -r requirements.txt` in terminal.
   - run `python dataset/worldcup/dataset_reader.py`
   - now you have the files in the related directory
+  
+
+### Twitter Stream dataset
+- A simple collection of JSON grabbed from the general twitter stream
+- 2021-08 (currently the latest version)
+- Download all .zip files from [here](https://archive.org/download/archiveteam-twitter-stream-2021-08).
+- run `unzip twitter-stream-2021-08*.zip` into the terminal.
+- there must be a directory structure like this: `2021/08/[day]/[hour]/[minute].json.bz2`
+- Process dataset to generate workload.tbz2 (already done, and the files are ready to use):
+  - make a .env file in the root directory of the repository.
+  - add this to the .env file (replace the path with the full path of the month directory; i.e. 2021/08/):
+    `twitter_trace_logs_directory="/path/to/month/directory/containing/days/folders"`
+  - run `pip install -r requirements.txt` in terminal.
+  - run `python dataset/twitter_tracer/dataset_reader.py --days [d | d1-d2] --processes n` examples:
+    - `python dataset/twitter_tracer/dataset_reader.py --days 5 --processes 4` i.e. do processing for day 5, using 4 processes
+    - `python dataset/twitter_tracer/dataset_reader.py --days 1-12 --processes 8` i.e. do processing for days 1 to 12, using 8 processes
+  - now you have the files in the related directory
